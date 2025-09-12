@@ -6,13 +6,17 @@ title = "None Of His Business"
 author = "Byron Dalles"
 
 [extra]
+
 # series = "Byron Dalles"
+
 toc = true
 
 [taxonomies]
 tags = [ "Tommy", "Cars", ]
 +++
+
 ## The Man
+
 Tommy knew cars. If it had four wheels, he had wrenched on it, maybe even driven it a time or two.
 
 Times were hard though, and what it took to keep his hard working Dad’s honest garage had made him a dishonest man. He started taking jobs he knew he couldn’t do and did his best to patch things up enough that the customer was out the door. Tommy didn’t care if the guys engine blew up in a few thousand more miles. By then, his check had cleared, and Tommy could keep the lights on another week.
@@ -23,8 +27,10 @@ So it wasn’t out of character for Tommy to accept a job servicing a make he ha
 
 “Very good” Said the old man with a suit that smelled oh so strongly of mothballs
 
----
+______________________________________________________________________
+
 ## The Damage
+
 Lunch was over, and it was time to assess the damage of what rolled into the shop this morning. An Altima with so much rust on it it was a miracle the lift didn’t snap it in two, an F150 with lots of play in the front wheel bearings, and a brown *Kaiser Grand Rapids* that looked more than out of place in the shop.
 
 The *Kaiser* was, cosmetically, perfect. It looked like it just rolled off the showroom floor in 19-? What is the year of this vehicle? Tommy realized he was so keen on taking the job he didn’t even bother to ask such a simple question. It had to be 70s, the body, the baby blue seats, it had to be 70s.
@@ -41,6 +47,6 @@ Raw Power
 
 “Where have you been my whole life?” Tommy jokingly asked the steering wheel before violently swinging it into a left turn onto the interstate
 
----
+______________________________________________________________________
 
 ## TO BE CONTINUED
