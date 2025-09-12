@@ -6,13 +6,11 @@ title = "None Of His Business"
 author = "Byron Dalles"
 
 [extra]
-
-# series = "Byron Dalles"
-
+series = "Byron Dalles"
 toc = true
 
 [taxonomies]
-tags = [ "Tommy", "Cars", ]
+tags = [ "Tommy", "Cars", "Byron Dalles"]
 +++
 
 ## The Man
