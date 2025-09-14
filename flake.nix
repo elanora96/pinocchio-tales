@@ -11,6 +11,8 @@
     treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
+  inputs.self.submodules = true;
+
   outputs =
     inputs:
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
@@ -19,19 +21,61 @@
       perSystem =
         {
           pkgs,
+          lib,
           ...
         }:
         let
           name = "pinocchio-tales";
-          buildInputs = with pkgs; [
+          pname = name;
+
+          src = ./.;
+          npmRoot = src;
+
+          importNpmLock = pkgs.importNpmLock;
+          nodejs = pkgs.nodejs;
+          zola = pkgs.zola;
+
+          meta = {
+            description = "We post scary stories for our followers";
+            homepage = "https://talesofpinocchio.netlify.app";
+            license = lib.licenses.mit;
+            maintainers = with lib.maintainers; [ elanora96 ];
+            platforms = lib.platforms.all;
+          };
+
+          buildInputs = [
             nodejs
             zola
           ];
         in
         {
+          packages.default = pkgs.buildNpmPackage {
+            inherit
+              name
+              pname
+              src
+              meta
+              buildInputs
+              ;
+            nativeBuildInputs = [ zola ];
+            npmDeps = importNpmLock { inherit npmRoot; };
+            npmConfigHook = importNpmLock.npmConfigHook;
+
+            installPhase = ''
+              mkdir -p $out
+              cp -r ./public $out/public
+            '';
+          };
           devShells.default = pkgs.mkShell {
             inherit buildInputs;
             name = "${name}-shell";
+            packages = [
+              importNpmLock.hooks.linkNodeModulesHook
+              nodejs
+            ];
+            npmDeps = importNpmLock.buildNodeModules {
+              inherit nodejs npmRoot;
+            };
           };
           treefmt = {
             # Used to find the project root

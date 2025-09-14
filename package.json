@@ -11,7 +11,8 @@
     "elasticlunrjava": "npm run abridge -- elasticlunrjava",
     "elasticlunr": "npm run abridge -- elasticlunr",
     "pagefind": "npm run abridge -- pagefind",
-    "tinysearch": "npm run abridge -- tinysearch"
+    "tinysearch": "npm run abridge -- tinysearch",
+    "build": "npm run abridge -- '--base-url https://talesofpinocchio.netlify.app'"
   },
   "dependencies": {
     "fast-toml": "^0.5.4",
