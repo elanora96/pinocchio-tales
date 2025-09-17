@@ -7,11 +7,13 @@
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
+    self.submodules = true;
     systems.url = "github:nix-systems/default";
-    treefmt-nix.url = "github:numtide/treefmt-nix";
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-
-  inputs.self.submodules = true;
 
   outputs =
     inputs:
@@ -43,9 +45,9 @@
             platforms = lib.platforms.all;
           };
 
-          buildInputs = [
+          nativeBuildInputs = [ zola ];
+          buildInputs = nativeBuildInputs ++ [
             nodejs
-            zola
           ];
         in
         {
@@ -55,9 +57,10 @@
               pname
               src
               meta
+              nativeBuildInputs
               buildInputs
               ;
-            nativeBuildInputs = [ zola ];
+
             npmDeps = importNpmLock { inherit npmRoot; };
             npmConfigHook = importNpmLock.npmConfigHook;
 
@@ -78,23 +81,14 @@
             };
           };
           treefmt = {
-            # Used to find the project root
-            projectRootFile = "flake.nix";
+            projectRootFile = "flake.nix"; # Used to find the project root
             programs = {
-              # JS and CSS
               biome = {
                 enable = true;
-                settings = {
-                  files = {
-                    includes = [ "!package_abridge.js" ];
-                  };
-                };
+                settings.files.includes = [ "!package_abridge.js" ];
               };
-              # Markdown
               mdformat.enable = true;
-              # Nix
               nixfmt.enable = true;
-              # TOML
               taplo.enable = true;
             };
           };
