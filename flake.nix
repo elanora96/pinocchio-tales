@@ -49,8 +49,17 @@
           buildInputs = nativeBuildInputs ++ [
             nodejs
           ];
+
+          program = pkgs.writeShellScript "run-dev-server.sh" ''
+            zola serve
+          '';
         in
         {
+          apps.default = {
+            type = "app";
+
+            program = "${program}";
+          };
           packages.default = pkgs.buildNpmPackage {
             inherit
               name
