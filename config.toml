@@ -114,7 +114,7 @@ keywords = "Scary, Stories, Dark, Spooky, Chilling, Pinocchio, Creepypasta" # us
 banner = "banner.png"                                                       # Used as default image for OpenGraph/Twitter if page specific image is undefined.
 # twitter_meta = "your-user-name"                                             # for SEO: twitter:site and twitter:creator
 # google = "Your Google Site verification code."
-# bing = "Your Bing Site verification code."
+bing = "C6530054D1CADA23C369DBB4E297223C"
 seo = true # enable or disable seo-related meta tags: opengraph, facebook, twitter
 #dev = false # development mode, if true then robots.txt should prevent search indexing.
 
