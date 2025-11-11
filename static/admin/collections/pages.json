@@ -1,0 +1,45 @@
+{
+  "$ref": "https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json",
+  "collections": [
+    {
+      "name": "pages",
+      "label": "Pages",
+      "format": "toml-frontmatter",
+      "folder": "content/pages/",
+      "create": true,
+      "fields": [
+        { "name": "title", "label": "Title" },
+        {
+          "name": "draft",
+          "label": "Draft",
+          "widget": "boolean",
+          "preview": false
+        },
+        {
+          "name": "path",
+          "label": "Path",
+          "preview": false
+        },
+        {
+          "name": "template",
+          "label": "Template",
+          "preview": false
+        },
+        { "name": "body", "label": "Body", "widget": "markdown" }
+      ],
+      "index_file": {
+        "name": "_index",
+        "label": "_index",
+        "editor": { "preview": false },
+        "fields": [
+          {
+            "name": "render",
+            "label": "Render",
+            "widget": "boolean",
+            "preview": false
+          }
+        ]
+      }
+    }
+  ]
+}

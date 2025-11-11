@@ -1,0 +1,63 @@
+{
+  "$ref": "https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json",
+  "collections": [
+    {
+      "name": "posts",
+      "label": "Posts",
+      "format": "toml-frontmatter",
+      "folder": "content/",
+      "create": true,
+      "fields": [
+        { "name": "title", "label": "Title" },
+        { "name": "author", "label": "Author" },
+        { "name": "date", "label": "Publish Date", "widget": "datetime" },
+        { "name": "description", "label": "Description", "preview": false },
+        {
+          "name": "draft",
+          "label": "Draft",
+          "widget": "boolean",
+          "preview": false
+        },
+        { "name": "extra.series", "label": "Series", "preview": false },
+        {
+          "name": "extra.toc",
+          "label": "Table of Contents",
+          "widget": "boolean",
+          "preview": false
+        },
+        {
+          "name": "taxonomies.tags",
+          "label": "Tags",
+          "widget": "list",
+          "preview": false
+        },
+        { "name": "body", "label": "Body", "widget": "markdown" }
+      ],
+      "index_file": {
+        "name": "_index",
+        "label": "_index",
+        "editor": { "preview": false },
+        "fields": [
+          {
+            "name": "template",
+            "label": "Template",
+            "preview": false
+          },
+          {
+            "name": "sort_by",
+            "label": "Sort By",
+            "widget": "select",
+            "options": ["date", "title", "author"],
+            "preview": false
+          },
+          {
+            "name": "paginate_by",
+            "label": "Paginate By",
+            "widget": "number",
+            "preview": false
+          }
+        ]
+      }
+    }
+  ]
+}

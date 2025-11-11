@@ -115,7 +115,7 @@ banner = "banner.png"                                                       # Us
 # twitter_meta = "your-user-name"                                             # for SEO: twitter:site and twitter:creator
 # google = "Your Google Site verification code."
 bing = "C6530054D1CADA23C369DBB4E297223C"
-seo = true # enable or disable seo-related meta tags: opengraph, facebook, twitter
+seo = true                                # enable or disable seo-related meta tags: opengraph, facebook, twitter
 #dev = false # development mode, if true then robots.txt should prevent search indexing.
 
 #head_extra = '<meta name="analytics" content="my-analytics-id" /><meta name="advertising" content="my-advertising-id" />'

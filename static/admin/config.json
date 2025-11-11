@@ -1,0 +1,12 @@
+{
+  "$schema": "https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json",
+  "backend": {
+    "name": "github",
+    "branch": "main",
+    "repo": "elanora96/pinocchio-tales",
+    "base_url": "https://sveltia-cms-auth.e-d69.workers.dev"
+  },
+  "media_folder": "static/images/uploads",
+  "public_folder": "/images/uploads",
+  "collections": []
+}
