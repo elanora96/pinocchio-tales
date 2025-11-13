@@ -31,6 +31,7 @@
         {
           pkgs,
           lib,
+          config,
           ...
         }:
         let
@@ -85,10 +86,12 @@
           };
           devShells.default = pkgs.mkShell {
             inherit buildInputs;
+            inherit (config.pre-commit) shellHook;
             name = "${name}-shell";
             packages = [
               importNpmLock.hooks.linkNodeModulesHook
               nodejs
+              config.pre-commit.settings.enabledPackages
             ];
             npmDeps = importNpmLock.buildNodeModules {
               inherit nodejs npmRoot;

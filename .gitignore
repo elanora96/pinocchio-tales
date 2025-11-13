@@ -20,3 +20,5 @@ result
 static/sw.js
 static/sw.min.js
 static/js/*
+
+.pre-commit-config.yaml
