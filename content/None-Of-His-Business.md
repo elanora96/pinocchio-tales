@@ -12,6 +12,7 @@ toc = true
 [taxonomies]
 tags = [ "Tommy", "Cars", "Byron Dalles" ]
 +++
+
 ## The Man
 
 Tommy knew cars. If it had four wheels, he had wrenched on it, maybe even driven it a time or two.
@@ -24,7 +25,7 @@ So it wasn’t out of character for Tommy to accept a job servicing a make he ha
 
 “Very good” Said the old man with a suit that smelled oh so strongly of mothballs
 
-**____________**
+**\_\_\_\_\_\_\_\_\_\_\_\_**
 
 ## The Damage
 
@@ -44,6 +45,6 @@ _Kaiser_ knew how to make a car
 
 “Where have you been my whole life?” Tommy jokingly asked the steering wheel before violently swinging it into a left turn onto the interstate
 
-**____________**
+**\_\_\_\_\_\_\_\_\_\_\_\_**
 
 ## TO BE CONTINUED
