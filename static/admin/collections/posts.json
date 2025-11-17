@@ -18,18 +18,28 @@
           "widget": "boolean",
           "preview": false
         },
-        { "name": "extra.series", "label": "Series", "preview": false },
         {
-          "name": "extra.toc",
-          "label": "Table of Contents",
-          "widget": "boolean",
-          "preview": false
+          "name": "extra",
+          "fields": [
+            { "name": "series", "label": "Series", "preview": false },
+            {
+              "name": "toc",
+              "label": "Table of Contents",
+              "widget": "boolean",
+              "preview": false
+            }
+          ]
         },
         {
-          "name": "taxonomies.tags",
-          "label": "Tags",
-          "widget": "list",
-          "preview": false
+          "name": "taxonomies",
+          "fields": [
+            {
+              "name": "tags",
+              "label": "Tags",
+              "widget": "list",
+              "preview": false
+            }
+          ]
         },
         { "name": "body", "label": "Body", "widget": "markdown" }
       ],
