@@ -20,6 +20,8 @@
         },
         {
           "name": "extra",
+          "label": "Extra",
+          "widget": "object",
           "fields": [
             { "name": "series", "label": "Series", "preview": false },
             {
@@ -32,6 +34,8 @@
         },
         {
           "name": "taxonomies",
+          "label": "Tags",
+          "widget": "object",
           "fields": [
             {
               "name": "tags",
