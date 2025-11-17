@@ -26,7 +26,7 @@ base-uri 'self'; \
 manifest-src 'self'; \
 worker-src 'self'; \
 form-action 'self'; \
-connect-src 'self' blob: data: unpkg.com fonts.googleapi.com api.github.com githubstatus.com www.githubstatus.com *.hyvor.com ws://*.hyvor.com; \
+connect-src 'self' blob: data: unpkg.com fonts.googleapis.com api.github.com githubstatus.com www.githubstatus.com githubusercontent.com avatars.githubusercontent.com *.hyvor.com ws://*.hyvor.com; \
 script-src 'self' unpkg.com talk.hyvor.com; \
 img-src 'self' blob: data: https://*; \
 frame-src 'self' blob: www.youtube-nocookie.com player.vimeo.com streamable.com www.streamable.com; \
